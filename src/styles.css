@@ -102,12 +102,87 @@ body,
 .row-content {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
+  min-width: 0;
 }
 
-.script-text {
-  line-height: 1.6;
-  white-space: pre-wrap;
+.line-editor {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  background: #fff;
+  padding: 4px 6px;
+  min-height: 36px;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+.line-editor:focus-within {
+  border-color: #1677ff;
+  box-shadow: 0 0 0 2px rgba(22, 119, 255, 0.12);
+}
+
+.marker {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 0 6px;
+  min-width: 34px;
+  height: 20px;
+  font-size: 11px;
+  line-height: 1;
+  flex: 0 0 auto;
+  transition: all 0.2s ease;
+}
+
+.marker:hover {
+  filter: brightness(0.98);
+}
+
+.marker-prompt {
+  background: #f8f3ff;
+  border: 1px solid #ceb0ff;
+  color: #531dab;
+}
+
+.marker-pause {
+  background: #edf6ff;
+  border: 1px solid #91caff;
+  color: #0958d9;
+}
+
+.marker-pinyin {
+  background: #fff7e8;
+  border: 1px solid #ffd591;
+  color: #ad4e00;
+}
+
+.marker-input {
+  min-width: 18px;
+  width: auto;
+  text-align: center;
+}
+
+.marker-input .ant-input {
+  padding: 0;
+  height: 18px;
+  font-size: 11px;
+  line-height: 18px;
+  text-align: center;
+  color: inherit;
+}
+
+.line-text-input {
+  flex: 1;
+  min-width: 320px;
+}
+
+.line-text-input .ant-input {
+  padding: 0;
+  line-height: 24px;
 }
 
 .row-actions {

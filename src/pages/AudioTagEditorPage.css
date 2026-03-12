@@ -32,12 +32,65 @@
   gap: 8px;
 }
 
-.params-row {
-  margin-bottom: 8px;
+.check-chip {
+  font-size: 12px;
+  line-height: 20px;
+  padding: 0 8px;
+  border-radius: 999px;
+  border: 1px solid #d9d9d9;
+  color: #595959;
+  cursor: pointer;
+  user-select: none;
 }
 
-.content-editor {
+.check-chip.is-checked {
+  border-color: #1677ff;
+  color: #1677ff;
+  background: #e6f4ff;
+}
+
+.params-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.param-chip {
+  font-size: 12px;
+  color: #595959;
+  border: 1px solid #d9d9d9;
+  border-radius: 999px;
+  padding: 2px 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.param-value {
+  min-width: 30px;
+  text-align: center;
+  color: #1677ff;
+  outline: none;
+  border-bottom: 1px dashed #91caff;
+}
+
+.content-editable {
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  padding: 8px 10px;
+  min-height: 56px;
   margin-bottom: 10px;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  outline: none;
+  background: #fff;
+}
+
+.content-editable:focus {
+  border-color: #1677ff;
+  box-shadow: 0 0 0 2px rgba(22, 119, 255, 0.12);
 }
 
 .ai_audio_right {
